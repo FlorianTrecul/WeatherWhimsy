@@ -12,8 +12,10 @@ struct HomeView: View {
         VStack {
             HeaderView(city: "Tours")
             WeatherCardView()
+            TemperatureCardView()
             Spacer()
         }
+        .background(Color("ColorBackground"))
     }
 }
 
