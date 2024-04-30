@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             HeaderView(city: "Tours")
+            WeatherCardView()
             Spacer()
         }
     }
