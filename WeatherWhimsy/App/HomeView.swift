@@ -9,15 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            HeaderView(city: "Tours")
-            WeatherCardView()
-            TemperatureCardView()
-            WheaterInformationView()
-            SunriseSunsetCardView()
-            Spacer()
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                HeaderView(city: "Tours")
+                WeatherCardView()
+                TemperatureCardView()
+                WheaterInformationView()
+                SunriseSunsetCardView()
+                FiveDayWeatherForecastCardView()
+            }
         }
-        .background(Color("ColorBackground"))
+        .background(Color("ColorBackground").ignoresSafeArea(.all))
     }
 }
 
