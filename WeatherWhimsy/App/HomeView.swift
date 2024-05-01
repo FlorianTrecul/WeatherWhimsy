@@ -14,6 +14,7 @@ struct HomeView: View {
             WeatherCardView()
             TemperatureCardView()
             WheaterInformationView()
+            SunriseSunsetCardView()
             Spacer()
         }
         .background(Color("ColorBackground"))

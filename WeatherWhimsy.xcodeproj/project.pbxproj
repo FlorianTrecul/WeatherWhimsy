@@ -13,11 +13,13 @@
 		5C5AD0642BDFE491006FA9FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5AD0632BDFE491006FA9FD /* Preview Assets.xcassets */; };
 		5C5AD06D2BDFEF28006FA9FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5AD06C2BDFEF28006FA9FD /* HomeView.swift */; };
 		5C5AD06F2BDFF13B006FA9FD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5AD06E2BDFF13B006FA9FD /* HeaderView.swift */; };
+		5C6BA11B2BE262B20055A702 /* SunStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BA11A2BE262B20055A702 /* SunStateView.swift */; };
 		5C739BD42BE0D86A00747B20 /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */; };
 		5C739BD62BE11CB400747B20 /* TemperatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */; };
 		5C739BD92BE12E2800747B20 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD82BE12E2800747B20 /* InformationView.swift */; };
 		5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */; };
 		5C739BDD2BE1496700747B20 /* InformationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDC2BE1496700747B20 /* InformationCardView.swift */; };
+		5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +30,13 @@
 		5C5AD0632BDFE491006FA9FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C5AD06C2BDFEF28006FA9FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5C5AD06E2BDFF13B006FA9FD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5C6BA11A2BE262B20055A702 /* SunStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunStateView.swift; sourceTree = "<group>"; };
 		5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
 		5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureCardView.swift; sourceTree = "<group>"; };
 		5C739BD82BE12E2800747B20 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInformationView.swift; sourceTree = "<group>"; };
 		5C739BDC2BE1496700747B20 /* InformationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardView.swift; sourceTree = "<group>"; };
+		5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */,
 				5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */,
 				5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */,
+				5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				5C739BD82BE12E2800747B20 /* InformationView.swift */,
 				5C739BDC2BE1496700747B20 /* InformationCardView.swift */,
+				5C6BA11A2BE262B20055A702 /* SunStateView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -182,10 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */,
 				5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */,
 				5C5AD05F2BDFE490006FA9FD /* ContentView.swift in Sources */,
 				5C5AD06D2BDFEF28006FA9FD /* HomeView.swift in Sources */,
 				5C739BDD2BE1496700747B20 /* InformationCardView.swift in Sources */,
+				5C6BA11B2BE262B20055A702 /* SunStateView.swift in Sources */,
 				5C5AD05D2BDFE490006FA9FD /* WeatherWhimsyApp.swift in Sources */,
 				5C739BD62BE11CB400747B20 /* TemperatureCardView.swift in Sources */,
 				5C5AD06F2BDFF13B006FA9FD /* HeaderView.swift in Sources */,
