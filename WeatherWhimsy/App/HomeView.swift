@@ -9,17 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                HeaderView(city: "Tours")
-                WeatherCardView()
-                TemperatureCardView()
-                WheaterInformationView()
-                SunriseSunsetCardView()
-                FiveDayWeatherForecastCardView()
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 16) {
+                    WeatherCardView()
+                    TemperatureCardView()
+                    WheaterInformationView()
+                    SunriseSunsetCardView()
+                    FiveDayWeatherForecastCardView()
+                }
+                .navigationBarItems(
+                    leading: NavigationBarLeadingView(city: "Tours"),
+                    trailing:
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "gearshape")
+                        })
+                )
             }
+            .padding(.vertical, 16)
+            .background(Color("ColorBackground").ignoresSafeArea(.all))
         }
-        .background(Color("ColorBackground").ignoresSafeArea(.all))
     }
 }
 

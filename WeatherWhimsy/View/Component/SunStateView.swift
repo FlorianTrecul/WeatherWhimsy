@@ -16,7 +16,6 @@ struct SunStateView: View {
         HStack {
             Text(title)
                 .font(.system(size: 16, weight: .semibold, design: .rounded))
-                .padding()
             Image(systemName: icon)
                 .symbolRenderingMode(.hierarchical)
             Text(time)

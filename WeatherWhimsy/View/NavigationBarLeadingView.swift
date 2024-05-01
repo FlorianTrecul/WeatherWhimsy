@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct NavigationBarLeadingView: View {
     var city: String = ""
     
     var body: some View {
@@ -18,17 +18,10 @@ struct HeaderView: View {
             Text(city)
                 .foregroundColor(Color(.label))
                 .fontWeight(.bold)
-            Spacer()
-            Image(systemName: "gearshape")
-                .foregroundColor(Color(.label))
-                .imageScale(.large)
         }
-        .padding()
     }
 }
 
 #Preview {
-    HeaderView(city: "Tours")
-        .previewLayout(.fixed(width: 375, height: 60))
-        .padding()
+    NavigationBarLeadingView(city: "Tours")
 }

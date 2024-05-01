@@ -25,5 +25,4 @@ struct TemperatureCardView: View {
 
 #Preview {
     TemperatureCardView()
-        .previewLayout(.fixed(width: 375, height: 60))
 }

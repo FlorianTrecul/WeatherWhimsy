@@ -12,7 +12,7 @@ struct WheaterInformationView: View {
         HStack {
             InformationCardView(title: "Wind speed", icon: "wind", information: "8.5km/h")
                 .padding(.leading)
-            InformationCardView(title: "Humidity", icon: "humidity", information: "52%")
+            InformationCardView(title: "Humidity", icon: "humidity.fill", information: "52%")
                 .padding(.trailing)
         }
     }

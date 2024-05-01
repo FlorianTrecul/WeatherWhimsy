@@ -50,5 +50,4 @@ struct WeatherCardView: View {
 
 #Preview {
     WeatherCardView()
-        .previewLayout(.fixed(width: 375, height: 60))
 }

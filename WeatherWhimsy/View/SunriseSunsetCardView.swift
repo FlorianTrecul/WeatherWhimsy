@@ -12,9 +12,14 @@ struct SunriseSunsetCardView: View {
         
         GroupBox {
             HStack {
-                SunStateView(title: "Sunrise", icon: "sun.max.fill", time: "4:54")
-                Spacer()
-                SunStateView(title: "Sunset", icon: "moon.fill", time: "21:18")
+                HStack {
+                    SunStateView(title: "Sunrise", icon: "sun.max.fill", time: "4:54")
+                    Spacer()
+                }
+                HStack {
+                    SunStateView(title: "Sunset", icon: "moon.fill", time: "21:18")
+                    Spacer()
+                }
             }
             .frame(maxWidth: .infinity)
         }
@@ -25,5 +30,4 @@ struct SunriseSunsetCardView: View {
 
 #Preview {
     SunriseSunsetCardView()
-        .previewLayout(.fixed(width: 375, height: 60))
 }
