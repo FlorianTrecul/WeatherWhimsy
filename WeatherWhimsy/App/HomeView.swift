@@ -13,6 +13,7 @@ struct HomeView: View {
             HeaderView(city: "Tours")
             WeatherCardView()
             TemperatureCardView()
+            WheaterInformationView()
             Spacer()
         }
         .background(Color("ColorBackground"))
