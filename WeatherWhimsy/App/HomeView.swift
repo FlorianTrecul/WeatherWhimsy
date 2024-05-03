@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("userTheme") private var userTheme: ThemeType = .light
+    @State private var showingSettingsView: Bool = false
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -22,14 +25,18 @@ struct HomeView: View {
                     leading: NavigationBarLeadingView(city: "Tours"),
                     trailing:
                         Button(action: {
-                            
+                            showingSettingsView.toggle()
                         }, label: {
                             Image(systemName: "gearshape")
                         })
+                        .sheet(isPresented: $showingSettingsView, content: {
+                            SettingsView()
+                        })
                 )
             }
+            .preferredColorScheme(userTheme.colorScheme)
             .padding(.vertical, 16)
-            .background(Color("ColorBackground").ignoresSafeArea(.all))
+            .background(.colorBackground)
         }
     }
 }

@@ -16,12 +16,15 @@
 		5C6BA11B2BE262B20055A702 /* SunStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BA11A2BE262B20055A702 /* SunStateView.swift */; };
 		5C6BA11F2BE26AB40055A702 /* FiveDayWeatherForecastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BA11E2BE26AB40055A702 /* FiveDayWeatherForecastCardView.swift */; };
 		5C6BA1212BE272E70055A702 /* FiveDayWeatherForecastItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BA1202BE272E70055A702 /* FiveDayWeatherForecastItemView.swift */; };
+		5C6BA1232BE2A34C0055A702 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BA1222BE2A34C0055A702 /* SettingsView.swift */; };
 		5C739BD42BE0D86A00747B20 /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */; };
 		5C739BD62BE11CB400747B20 /* TemperatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */; };
 		5C739BD92BE12E2800747B20 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BD82BE12E2800747B20 /* InformationView.swift */; };
 		5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */; };
 		5C739BDD2BE1496700747B20 /* InformationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDC2BE1496700747B20 /* InformationCardView.swift */; };
 		5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */; };
+		5C9787E22BE3F87900E4ED80 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9787E12BE3F87900E4ED80 /* ThemeChangeView.swift */; };
+		5C9787E72BE3FA6700E4ED80 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9787E62BE3FA6700E4ED80 /* SchemeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +38,15 @@
 		5C6BA11A2BE262B20055A702 /* SunStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunStateView.swift; sourceTree = "<group>"; };
 		5C6BA11E2BE26AB40055A702 /* FiveDayWeatherForecastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeatherForecastCardView.swift; sourceTree = "<group>"; };
 		5C6BA1202BE272E70055A702 /* FiveDayWeatherForecastItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeatherForecastItemView.swift; sourceTree = "<group>"; };
+		5C6BA1222BE2A34C0055A702 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
 		5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureCardView.swift; sourceTree = "<group>"; };
 		5C739BD82BE12E2800747B20 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInformationView.swift; sourceTree = "<group>"; };
 		5C739BDC2BE1496700747B20 /* InformationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardView.swift; sourceTree = "<group>"; };
 		5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetCardView.swift; sourceTree = "<group>"; };
+		5C9787E12BE3F87900E4ED80 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
+		5C9787E62BE3FA6700E4ED80 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				5C5AD06B2BDFEDE9006FA9FD /* App */,
-				5C5AD06A2BDFECF5006FA9FD /* View */,
 				5C5AD0602BDFE491006FA9FD /* Assets.xcassets */,
 				5C5AD0622BDFE491006FA9FD /* Preview Content */,
+				5C9787E52BE3FA4C00E4ED80 /* Util */,
+				5C5AD06A2BDFECF5006FA9FD /* View */,
 			);
 			path = WeatherWhimsy;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 				5C739BD52BE11CB400747B20 /* TemperatureCardView.swift */,
 				5C739BD32BE0D86A00747B20 /* WeatherCardView.swift */,
 				5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */,
+				5C9787E12BE3F87900E4ED80 /* ThemeChangeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 				5C5AD05E2BDFE490006FA9FD /* ContentView.swift */,
 				5C5AD06C2BDFEF28006FA9FD /* HomeView.swift */,
 				5C5AD05C2BDFE490006FA9FD /* WeatherWhimsyApp.swift */,
+				5C6BA1222BE2A34C0055A702 /* SettingsView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -122,6 +131,14 @@
 				5C6BA11A2BE262B20055A702 /* SunStateView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		5C9787E52BE3FA4C00E4ED80 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5C9787E62BE3FA6700E4ED80 /* SchemeType.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +213,14 @@
 			files = (
 				5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */,
 				5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */,
+				5C9787E72BE3FA6700E4ED80 /* SchemeType.swift in Sources */,
 				5C5AD05F2BDFE490006FA9FD /* ContentView.swift in Sources */,
+				5C9787E22BE3F87900E4ED80 /* ThemeChangeView.swift in Sources */,
 				5C5AD06D2BDFEF28006FA9FD /* HomeView.swift in Sources */,
 				5C6BA1212BE272E70055A702 /* FiveDayWeatherForecastItemView.swift in Sources */,
 				5C739BDD2BE1496700747B20 /* InformationCardView.swift in Sources */,
 				5C6BA11B2BE262B20055A702 /* SunStateView.swift in Sources */,
+				5C6BA1232BE2A34C0055A702 /* SettingsView.swift in Sources */,
 				5C5AD05D2BDFE490006FA9FD /* WeatherWhimsyApp.swift in Sources */,
 				5C739BD62BE11CB400747B20 /* TemperatureCardView.swift in Sources */,
 				5C5AD06F2BDFF13B006FA9FD /* NavigationBarLeadingView.swift in Sources */,
