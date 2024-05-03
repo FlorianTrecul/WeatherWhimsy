@@ -10,13 +10,15 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.colorScheme) private var scheme
     @Environment(\.presentationMode) var presentationMode
+    
     @AppStorage("userTheme") private var userTheme: ThemeType = .light
+    @AppStorage("unit") private var unit: UnitType = .standard
     
     @State private var showingThemeChangeView: Bool = false
     
     var body: some View {
         NavigationStack {
-            List {
+            Form {
                 Section(header: Text("Appareance")) {
                     Button(action: {
                         showingThemeChangeView.toggle()
@@ -27,6 +29,15 @@ struct SettingsView: View {
                             Text("Change Theme")
                         }
                     })
+                }
+                Section(header: Text("Units")) {
+                    Picker("Units", selection: $unit) {
+                        ForEach(UnitType.allCases, id: \.self)  { unit in
+                            Text(unit.title)
+                        }
+                    }
+                    .padding(.vertical, 8)
+                    .pickerStyle(.segmented)
                 }
             }
             .navigationTitle("Settings")
