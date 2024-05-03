@@ -38,7 +38,7 @@ struct ThemeChangeView: View {
             HStack(spacing: 0) {
                 ForEach(ThemeType.allCases, id: \.rawValue) { theme in
                     if theme != .system {
-                        Text(theme.rawValue)
+                        Text(theme.title)
                             .padding(.vertical, 10)
                             .frame(width: 100)
                             .background {

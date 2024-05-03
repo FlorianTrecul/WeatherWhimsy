@@ -18,7 +18,7 @@ struct FiveDayWeatherForecastCardView: View {
             Label("5-day forecast", systemImage: "calendar")
         }
         .padding(.horizontal)
-        .backgroundStyle(Color("ColorCard"))
+        .backgroundStyle(.colorCard)
     }
 }
 

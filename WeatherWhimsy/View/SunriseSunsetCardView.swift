@@ -24,7 +24,7 @@ struct SunriseSunsetCardView: View {
             .frame(maxWidth: .infinity)
         }
         .padding(.horizontal)
-        .backgroundStyle(Color("ColorCard"))
+        .backgroundStyle(.colorCard)
     }
 }
 
