@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WeatherCardView: View {
+    @Environment(AppState.self) private var appState: AppState
+    
     var body: some View {
         GroupBox {
             HStack {
@@ -27,27 +29,25 @@ struct WeatherCardView: View {
                     }
                     .offset(y: 10)
                 }
-                .foregroundStyle(.white)
                 Spacer()
                 VStack(alignment: .center, spacing: 20) {
                     ZStack {
-                        Image(systemName: "cloud.sun.fill")
+                        Image(systemName: appState.weatherConditionsType.icon)
                             .resizable()
-                            .scaledToFit()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 120, height: 120)
                             .symbolRenderingMode(.multicolor)
                     }
-                    Text("26°/12°")
-                        .font(.system(size: 16, weight: .bold, design: .rounded))
-                        .foregroundStyle(.white)
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 100)
         }
         .padding(.horizontal)
-        .backgroundStyle(.blue)
+        .backgroundStyle(.colorCard.opacity(0.4))
     }
 }
 
 #Preview {
     WeatherCardView()
+        .environment(AppState.shared)
 }

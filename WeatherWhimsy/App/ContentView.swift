@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(AppState.self) private var appState: AppState
+    
     var body: some View {
-        HomeView()
+        HomeScreen()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(AppState.shared)
 }

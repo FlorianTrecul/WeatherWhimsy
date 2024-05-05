@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct WeatherWhimsyApp: App {
+    
+    @State private var appState = AppState.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appState)
         }
     }
 }

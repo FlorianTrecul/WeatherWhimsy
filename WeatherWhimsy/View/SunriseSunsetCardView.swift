@@ -13,18 +13,18 @@ struct SunriseSunsetCardView: View {
         GroupBox {
             HStack {
                 HStack {
-                    SunStateView(title: "Sunrise", icon: "sun.max.fill", time: "4:54")
+                    SunStateView(title: "Sunrise", icon: "sunrise.fill", time: "4:54")
                     Spacer()
                 }
                 HStack {
-                    SunStateView(title: "Sunset", icon: "moon.fill", time: "21:18")
+                    SunStateView(title: "Sunset", icon: "sunset.fill", time: "21:18")
                     Spacer()
                 }
             }
             .frame(maxWidth: .infinity)
         }
         .padding(.horizontal)
-        .backgroundStyle(.colorCard)
+        .backgroundStyle(.colorCard.opacity(0.4))
     }
 }
 

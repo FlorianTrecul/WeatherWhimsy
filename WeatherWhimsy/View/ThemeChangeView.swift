@@ -64,7 +64,7 @@ struct ThemeChangeView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .frame(height: 410)
-        .background(.colorBackground)
+        .background(.colorCard.opacity(0.4))
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)
         .preferredColorScheme(scheme)

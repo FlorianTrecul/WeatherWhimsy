@@ -19,7 +19,7 @@ struct TemperatureCardView: View {
             }
         }
         .padding(.horizontal)
-        .backgroundStyle(.colorCard)
+        .backgroundStyle(.colorCard.opacity(0.4))
     }
 }
 

@@ -20,7 +20,7 @@ struct InformationCardView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .backgroundStyle(.colorCard)
+        .backgroundStyle(.colorCard.opacity(0.4))
     }
 }
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FiveDayWeatherForecastItemView: View {
+struct FiveDayWeatherForecastCellView: View {
     var body: some View {
         HStack {
             HStack(spacing: 4) {
@@ -33,5 +33,5 @@ struct FiveDayWeatherForecastItemView: View {
 }
 
 #Preview {
-    FiveDayWeatherForecastItemView()
+    FiveDayWeatherForecastCellView()
 }

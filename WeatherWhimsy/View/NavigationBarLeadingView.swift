@@ -13,10 +13,10 @@ struct NavigationBarLeadingView: View {
     var body: some View {
         HStack {
             Image(systemName: "mappin.circle")
-                .foregroundColor(Color(.label))
+                .foregroundStyle(Color(.label))
                 .imageScale(.large)
             Text(city)
-                .foregroundColor(Color(.label))
+                .foregroundStyle(Color(.label))
                 .fontWeight(.bold)
         }
     }

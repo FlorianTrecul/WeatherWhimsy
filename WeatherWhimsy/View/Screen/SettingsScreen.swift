@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct SettingsScreen: View {
     @Environment(\.colorScheme) private var scheme
     @Environment(\.presentationMode) var presentationMode
+    @Environment(AppState.self) private var appState: AppState
     
     @AppStorage("userTheme") private var userTheme: ThemeType = .light
     @AppStorage("unit") private var unit: UnitType = .standard
@@ -25,11 +26,12 @@ struct SettingsView: View {
                     }, label: {
                         HStack {
                             Image(systemName: userTheme == .dark ? "moon.fill" : "circle.fill")
-                                .foregroundStyle(userTheme == .dark ? .colorMoon : .colorSun)
+                                .foregroundStyle(userTheme == .dark ? .colorDarkMode : .colorLightMode)
                             Text("Change Theme")
                         }
                     })
                 }
+                .listRowBackground(Color.colorCard.opacity(0.4))
                 Section(header: Text("Units")) {
                     Picker("Units", selection: $unit) {
                         ForEach(UnitType.allCases, id: \.self)  { unit in
@@ -39,7 +41,10 @@ struct SettingsView: View {
                     .padding(.vertical, 8)
                     .pickerStyle(.segmented)
                 }
+                .listRowBackground(Color.colorCard.opacity(0.4))
             }
+            .background(appState.weatherConditionsType.backgroundColor.gradient)
+            .scrollContentBackground(.hidden)
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
@@ -50,7 +55,6 @@ struct SettingsView: View {
                         Image(systemName: "xmark")
                     })
             )
-            .background(.colorBackground)
         }
         .preferredColorScheme(userTheme.colorScheme)
         .sheet(isPresented: $showingThemeChangeView, content: {
@@ -62,5 +66,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsScreen()
+        .environment(AppState.shared)
 }

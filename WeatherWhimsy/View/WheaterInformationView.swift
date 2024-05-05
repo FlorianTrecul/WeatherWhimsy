@@ -15,6 +15,7 @@ struct WheaterInformationView: View {
             InformationCardView(title: "Humidity", icon: "humidity.fill", information: "52%")
                 .padding(.trailing)
         }
+        .backgroundStyle(.colorCard.opacity(0.4))
     }
 }
 

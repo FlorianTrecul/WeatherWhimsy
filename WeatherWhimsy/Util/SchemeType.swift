@@ -15,11 +15,11 @@ enum ThemeType: String, CaseIterable {
     func color(scheme: ColorScheme) -> Color {
         switch self {
         case .system:
-            return scheme == .dark ? .colorMoon: .colorSun
+            return scheme == .dark ? .colorDarkMode : .colorLightMode
         case .light:
-            return .colorSun
+            return .colorLightMode
         case .dark:
-            return .colorMoon
+            return .colorDarkMode
         }
     }
     
