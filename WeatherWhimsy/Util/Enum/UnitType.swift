@@ -5,7 +5,7 @@
 //  Created by Florian Trecul on 03/05/2024.
 //
 
-import SwiftUI
+import Foundation
 
 enum UnitType: String, CaseIterable {
     case metric
@@ -22,6 +22,17 @@ extension UnitType {
             return "Fahrenheit"
         case .standard:
             return "Kelvin"
+        }
+    }
+    
+    var symbol: String {
+        switch self {
+        case .metric:
+            return "°C"
+        case .imperial:
+            return "°F"
+        case .standard:
+            return "K"
         }
     }
 }
