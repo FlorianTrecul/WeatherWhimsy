@@ -8,24 +8,30 @@
 import SwiftUI
 
 struct WeatherCardView: View {
+    let description: String
+    let temperature: String
+    
     @Environment(AppState.self) private var appState: AppState
+    @AppStorage("unit") private var unit: UnitType = .standard
     
     var body: some View {
         GroupBox {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Tuesday 25, july")
+                    HStack(spacing: 2) {
+                        Text("\(Date().formatted(Date.FormatStyle().weekday(.wide))),")
+                        Text(Date(), style: .date)
+                    }
                         .font(.system(size: 12, weight: .light, design: .rounded))
-                    Text("Clear and Sunny")
+                    Text(description.capitalized)
                         .font(.system(size: 16, weight: .bold, design: .rounded))
                     Spacer()
                     HStack(alignment: .top, spacing: 0) {
-                        Text("23")
+                        Text(temperature)
                             .font(.system(size: 56, weight: .bold, design: .rounded))
-                        Text("°C")
+                        Text(unit.symbol)
                             .font(.system(size: 24, weight: .semibold, design: .rounded))
                             .offset(y: 8)
-                        
                     }
                     .offset(y: 10)
                 }
@@ -35,7 +41,7 @@ struct WeatherCardView: View {
                         Image(systemName: appState.weatherConditionsType.icon)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 120, height: 120)
+                            .frame(width: 100, height: 100)
                             .symbolRenderingMode(.multicolor)
                     }
                 }
@@ -48,6 +54,6 @@ struct WeatherCardView: View {
 }
 
 #Preview {
-    WeatherCardView()
+    WeatherCardView(description: "broken clouds", temperature: "23")
         .environment(AppState.shared)
 }

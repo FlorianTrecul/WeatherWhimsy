@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct SunriseSunsetCardView: View {
+    let sunrise: TimeInterval
+    let sunset: TimeInterval
+    
     var body: some View {
-        
         GroupBox {
             HStack {
                 HStack {
-                    SunStateView(title: "Sunrise", icon: "sunrise.fill", time: "4:54")
+                    SunStateView(title: "Sunrise", icon: "sunrise.fill", time: sunrise.convertTimeIntervalToTime())
                     Spacer()
                 }
                 HStack {
-                    SunStateView(title: "Sunset", icon: "sunset.fill", time: "21:18")
+                    SunStateView(title: "Sunset", icon: "sunset.fill", time: sunset.convertTimeIntervalToTime())
                     Spacer()
                 }
             }
@@ -29,5 +31,5 @@ struct SunriseSunsetCardView: View {
 }
 
 #Preview {
-    SunriseSunsetCardView()
+    SunriseSunsetCardView(sunrise: 1715660506, sunset: 1715714747)
 }

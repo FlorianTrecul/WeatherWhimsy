@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct TemperatureCardView: View {
+    let feelsLike: String
+    let temperatureMaximum: String
+    let temperatureMinimum: String
+
+    @AppStorage("unit") private var unit: UnitType = .standard
+    
     var body: some View {
         GroupBox {
             HStack {
-                InformationView(title: "Feels like", icon: "thermometer.medium", information: "18°C")
+                InformationView(title: "Feels like", icon: "thermometer.medium", information: "\(feelsLike)\(unit.symbol)")
                 Spacer()
-                InformationView(title: "Maximum", icon: "thermometer.high", information: "26°C")
+                InformationView(title: "Maximum", icon: "thermometer.high", information: "\(temperatureMaximum)\(unit.symbol)")
                 Spacer()
-                InformationView(title: "Minimum", icon: "thermometer.low", information: "12°C")
+                InformationView(title: "Minimum", icon: "thermometer.low", information: "\(temperatureMinimum)\(unit.symbol)")
             }
         }
         .padding(.horizontal)
@@ -24,5 +30,5 @@ struct TemperatureCardView: View {
 }
 
 #Preview {
-    TemperatureCardView()
+    TemperatureCardView(feelsLike: "18", temperatureMaximum: "12", temperatureMinimum: "26")
 }

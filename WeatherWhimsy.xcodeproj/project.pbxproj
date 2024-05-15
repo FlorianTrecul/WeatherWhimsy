@@ -27,6 +27,7 @@
 		5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */; };
 		5C739BDD2BE1496700747B20 /* InformationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDC2BE1496700747B20 /* InformationCardView.swift */; };
 		5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */; };
+		5C7D701D2BF385580077B24C /* TimeInterval+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D701C2BF385580077B24C /* TimeInterval+Date.swift */; };
 		5C9787E22BE3F87900E4ED80 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9787E12BE3F87900E4ED80 /* ThemeChangeView.swift */; };
 		5C9787E72BE3FA6700E4ED80 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9787E62BE3FA6700E4ED80 /* SchemeType.swift */; };
 		5C9787E92BE4D21B00E4ED80 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9787E82BE4D21B00E4ED80 /* UnitType.swift */; };
@@ -59,6 +60,7 @@
 		5C739BDA2BE1411000747B20 /* WheaterInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInformationView.swift; sourceTree = "<group>"; };
 		5C739BDC2BE1496700747B20 /* InformationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardView.swift; sourceTree = "<group>"; };
 		5C739BDE2BE23DA700747B20 /* SunriseSunsetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetCardView.swift; sourceTree = "<group>"; };
+		5C7D701C2BF385580077B24C /* TimeInterval+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Date.swift"; sourceTree = "<group>"; };
 		5C9787E12BE3F87900E4ED80 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
 		5C9787E62BE3FA6700E4ED80 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
 		5C9787E82BE4D21B00E4ED80 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
@@ -99,10 +101,10 @@
 		5C5AD05B2BDFE490006FA9FD /* WeatherWhimsy */ = {
 			isa = PBXGroup;
 			children = (
-				5C70C0662BE8C07200B1B667 /* Network */,
-				5C70C05B2BE8AEC100B1B667 /* Data */,
 				5C5AD06B2BDFEDE9006FA9FD /* App */,
 				5C5AD0602BDFE491006FA9FD /* Assets.xcassets */,
+				5C70C05B2BE8AEC100B1B667 /* Data */,
+				5C70C0662BE8C07200B1B667 /* Network */,
 				5C5AD0622BDFE491006FA9FD /* Preview Content */,
 				5C9787E52BE3FA4C00E4ED80 /* Util */,
 				5C5AD06A2BDFECF5006FA9FD /* View */,
@@ -192,9 +194,18 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		5C7D701B2BF3853B0077B24C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C7D701C2BF385580077B24C /* TimeInterval+Date.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5C9787E52BE3FA4C00E4ED80 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5C7D701B2BF3853B0077B24C /* Extension */,
 				5C70C06F2BE90EBC00B1B667 /* Enum */,
 				5C70C0642BE8BBBC00B1B667 /* Constants.swift */,
 			);
@@ -292,6 +303,7 @@
 				5C739BDF2BE23DA700747B20 /* SunriseSunsetCardView.swift in Sources */,
 				5C70C0632BE8BA8D00B1B667 /* APIEndpoint.swift in Sources */,
 				5C739BDB2BE1411000747B20 /* WheaterInformationView.swift in Sources */,
+				5C7D701D2BF385580077B24C /* TimeInterval+Date.swift in Sources */,
 				5CD286F02BE7B52600649740 /* AppState.swift in Sources */,
 				5C9787E72BE3FA6700E4ED80 /* SchemeType.swift in Sources */,
 				5C70C0652BE8BBBC00B1B667 /* Constants.swift in Sources */,

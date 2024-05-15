@@ -12,6 +12,7 @@ struct ResponseBody: Decodable {
     let main: MainResponse
     let wind: WindRespone
     let name: String
+    let sys: SystemResponse
 }
 
 struct WeatherResponse: Decodable {
@@ -38,4 +39,9 @@ struct MainResponse: Decodable {
 
 struct WindRespone: Decodable {
     let speed: Double
+}
+
+struct SystemResponse: Decodable {
+    let sunrise: TimeInterval
+    let sunset: TimeInterval
 }

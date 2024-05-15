@@ -37,26 +37,28 @@ struct HomeScreen: View {
         @Bindable var appState = appState
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 16) {
-                    WeatherCardView()
-                    TemperatureCardView()
-                    WheaterInformationView()
-                    SunriseSunsetCardView()
-                    FiveDayWeatherForecastCardView()
+                if let response = response {
+                    VStack(spacing: 16) {
+                        WeatherCardView(description: response.weather.first?.description ?? "Unknown", temperature: String(Int(response.main.temperature)))
+                        TemperatureCardView(feelsLike: String(Int(response.main.feelsLike)), temperatureMaximum: String(Int(response.main.temperatureMaximum)), temperatureMinimum: String(Int(response.main.temperatureMinimum)))
+                        WheaterInformationView(windSpeed: String(response.wind.speed), humidity: String(response.main.humidity))
+                        SunriseSunsetCardView(sunrise: response.sys.sunrise, sunset: response.sys.sunset)
+                        FiveDayWeatherForecastCardView()
+                    }
+                    .navigationBarItems(
+                        leading: NavigationBarLeadingView(city: response.name),
+                        trailing:
+                            Button(action: {
+                                showingSettingsScreen.toggle()
+                            }, label: {
+                                Image(systemName: "gearshape")
+                            })
+                            .sheet(isPresented: $showingSettingsScreen, content: {
+                                SettingsScreen()
+                            })
+                    )
+                    .toolbarBackground(appState.weatherConditionsType.backgroundColor.gradient, for: .navigationBar)
                 }
-                .navigationBarItems(
-                    leading: NavigationBarLeadingView(city: "Tours"),
-                    trailing:
-                        Button(action: {
-                            showingSettingsScreen.toggle()
-                        }, label: {
-                            Image(systemName: "gearshape")
-                        })
-                        .sheet(isPresented: $showingSettingsScreen, content: {
-                            SettingsScreen()
-                        })
-                )
-                .toolbarBackground(appState.weatherConditionsType.backgroundColor.gradient, for: .navigationBar)
             }
             .background(appState.weatherConditionsType.backgroundColor.gradient)
         }
